@@ -45,7 +45,7 @@ Default database contains three listings for two dealers.
   --data '[{"code":"C3","make":"Audi","model":"Golf","color":"White","year":2015,"kw":100,"price":12500},{"code":"C4","make":"VW","model":"Passat","color":"Red","year":2018,"kw":150,"price":16500},{"code":"C5","make":"VW","model":"Golf","color":"Blue","year":2017,"kw":120,"price":14500}]' \
   http://localhost:8080/vehicle_listings/D2
 * Add/Update listings for the dealer D1 with csv(considering csv file is located in specified path):
-  curl -X POST -H 'Content-Type: application/octet-stream' -d @listings.csv http://localhost:8080/upload_csv/D1
+  curl -X POST -H 'Content-Type: application/octet-stream' --data-binary @listings.csv http://localhost:8080/upload_csv/D1
 
 ## Potential improvements
 * Add more request validation
